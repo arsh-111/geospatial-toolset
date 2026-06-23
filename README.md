@@ -1,71 +1,37 @@
-# geospatial-toolset README
+# Geospatial Toolset Pro
 
-This is the README for your extension "geospatial-toolset". After writing up a brief description, we recommend including the following sections.
+**Geospatial Toolset Pro** turns your VS Code environment into a high-performance interactive geospatial development studio and Machine Learning workbench. Designed specifically for researchers and GIS developers, it bridges the gap between text-based geographic data formats, live mapping layers, and powerful background scikit-learn ML pipelines.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+![Extension Logo](logo.png)
 
 ---
 
-## Following extension guidelines
+## 🚀 Core Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+### 1. Interactive Multi-Format Canvas & Map Rendering
+* Instantly preview spatial file structures (**GeoJSON**, **WKT**, and **KML**) directly within an integrated webview map.
+* Toggle fluidly between **OpenStreetMap Standard View** and **Google High-Resolution Satellite Hybrid Imagery** layers to analyze your study regions.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+### 2. Live Text-to-Map Synchronization
+* Keep your text editor and preview canvas open side-by-side. 
+* As you edit and save coordinate values or geometry properties in your JSON/WKT files, the map shifts and re-renders spatial alterations dynamically in real-time.
 
-## Working with Markdown
+### 3. Native Spatial Drawing & Reverse Injection
+* Create new geospatial data geometries directly on the basemap canvas using built-in interactive vector tools (Polygons, Rectangles, Points).
+* Generate on-the-fly syntax snippets (such as **Google Earth Engine API code blocks**) containing your custom drawn coordinates and inject them directly back into your open editor cursor line.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+### 4. Local LULC Machine Learning Workbench
+* Train and deploy standard classification algorithms (**Random Forest**, **Support Vector Machines (SVM)**, and **Gradient Boosting / XGBoost Variants**) straight from your workspace.
+* Runs lightweight, background Python data processing engines to sample spectral features and predict classification boundaries.
+* Renders highly dense, interactive thematic point grids (Water, Vegetation, Built-up) over the base map canvas for immediate validation.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🛠️ System Requirements & Setup
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+To use the local Machine Learning LULC engine, ensure you have a Python 3 environment active on your machine alongside the core data science libraries. 
 
-**Enjoy!**
+Run the following command in your terminal to install the underlying engine dependencies:
+
+```bash
+pip install scikit-learn rasterio geopandas numpy
